@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { MealContent } from './components/MealContent';
+
+import { MealGenerator } from './components/MealGenerator';
+
+import './styles/main.css';
 
 function App() {
+  const [recipe, setRecipe] = useState()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <main id="home">
+      <header>
+        <h1 className="title">Gerador de comida</h1>
       </header>
-    </div>
+      
+      <section className="new-meal-container">
+        <p>Clique aqui para gerar uma nova comida</p>
+        <MealGenerator setRecipe={setRecipe}/>
+      </section>
+
+      <section className="meal-container">
+        {!recipe ? <h4 className="empty-recipe">Nem uma comida encontrada ainda</h4> : (
+          <MealContent recipe={recipe} />
+        )}
+      </section>
+    </main>
   );
 }
 
