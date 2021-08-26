@@ -141,6 +141,8 @@ aside img:hover {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto 1fr;
+    justify-content: center;
+    align-items: center;
 
     column-gap: 7rem;
     row-gap: 2rem;
@@ -150,7 +152,6 @@ aside img:hover {
 
   aside, .recipe-infos, .youtube-container, .instructions-container {
     max-width: 400px;
-    margin: auto;
+    margin: 0 auto auto;
   }
-
 }
