@@ -5,10 +5,7 @@
   padding: 0;
 }
 
-#root {
-  width: 100vw;
-  min-height: 100vh;
-
+body > #root {  
   font-family: 'Roboto', sans-serif;
 }
 

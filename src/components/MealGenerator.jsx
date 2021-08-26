@@ -13,7 +13,9 @@ export function MealGenerator(props) {
       area: recipe.strArea,
       category: recipe.strCategory,
       instructions: recipe.strInstructions,
-      image: recipe.strMealThumb
+      image: recipe.strMealThumb,
+      link: recipe.strSource,
+      youtube: recipe.strYoutube
     })
   }
 

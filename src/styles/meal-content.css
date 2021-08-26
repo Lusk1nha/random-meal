@@ -12,7 +12,11 @@
 aside {
   width: 100%;
   height: 100%;
-  max-height: 200px;
+  max-height: 300px;
+
+  overflow: hidden;
+
+  border-radius: 0.5rem;
 
   margin-bottom: 2rem;
 }
@@ -27,8 +31,6 @@ aside img {
   width: 100%;
   height: 100%;
 
-  border-radius: 0.5rem;
-
   transition: all 0.3s;
 
   cursor: pointer;
@@ -38,10 +40,97 @@ aside img:hover {
   box-shadow: 0 0 10px #4545da9f;
 }
 
-.name {
+.recipe-infos {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 2rem 0 3rem;
+}
+
+.recipe-infos .name {
   color: #4545da;
-  font-size: clamp(0.975rem, 5vw, 1.1rem);
+  font-size: clamp(1.1rem, 5vw, 1.4rem);
   font-weight: 700;
   letter-spacing: 0.040rem;
   text-align: center;
+
+  margin-bottom: 0.5rem;
+}
+
+.recipe-infos .area {
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.040rem;
+
+  margin-bottom: 3rem;
+}
+
+.recipe-infos .recipe-site {
+  width: 100%;
+  
+  color: #4545da;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instructions-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 2rem;
+}
+
+.instructions-container h4 {
+  font-size: clamp(1rem, 5vw, 1.1rem);
+  letter-spacing: 0.05rem;
+
+  margin-bottom: 2rem;
+}
+
+.instructions-text {
+  width: 100%;
+
+  text-align: center;
+
+  word-break: keep-all;
+  white-space: pre-wrap;
+  margin-bottom: 1rem;
+}
+
+.instructions-text p {
+  font-size: clamp(0.9rem, 5vw, 1rem);
+  margin-bottom: 1.5rem;
+}
+
+.youtube-container {
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.youtube-container h5 {
+  color: #444242;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.05rem;
+
+  margin-bottom: 1rem;
 }
