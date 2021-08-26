@@ -16,7 +16,7 @@ export function MealContent(props) {
         <h3 className="area">{recipe.area || 'Desconhecida'}</h3>
 
         { recipe.link ? (
-          <a className="recipe-site" href={recipe.link} target="_blank">
+          <a className="recipe-site" href={recipe.link} target="_blank" rel="noopener noreferrer">
             See in the official site
           </a>
         ) : ''}
