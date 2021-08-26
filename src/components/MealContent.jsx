@@ -22,8 +22,15 @@ export function MealContent(props) {
         ) : ''}
       </section>
 
+      { recipe.youtube !== undefined ? (
+        <section className="youtube-container">
+          <h5>Youtube video</h5>
+          <RecipeVideo videoURL={recipe.youtube} foodTitle={recipe.name} />
+        </section>
+      ) : ''}
+
       <section className="instructions-container">
-        <h4>Instruções</h4>
+        <h4>Instructions</h4>
 
         <article className="instructions-text">
           {recipe.instructions.split('\r\n').map((text, index) => {
@@ -31,13 +38,6 @@ export function MealContent(props) {
           })}
         </article>
       </section>
-      
-      { recipe.youtube !== undefined ? (
-        <section className="youtube-container">
-          <h5>Youtube video</h5>
-          <RecipeVideo videoURL={recipe.youtube} foodTitle={recipe.name} />
-        </section>
-      ) : ''}
     </article>
   );
 }

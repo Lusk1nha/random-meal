@@ -11,16 +11,16 @@ function App() {
   return (
     <main id="home">
       <header>
-        <h1 className="title">Gerador de comida</h1>
+        <h1 className="title">Food generator</h1>
       </header>
       
       <section className="new-meal-container">
-        <p>Clique aqui para gerar uma nova comida</p>
+        <p>Click here to generate a new recipe</p>
         <MealGenerator setRecipe={setRecipe}/>
       </section>
 
       <section className="meal-container">
-        {!recipe ? <h4 className="empty-recipe">Nem uma comida encontrada ainda</h4> : (
+        {!recipe ? <h4 className="empty-recipe">No food was generated</h4> : (
           <MealContent recipe={recipe} />
         )}
       </section>

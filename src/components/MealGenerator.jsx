@@ -21,7 +21,7 @@ export function MealGenerator(props) {
 
   return (
     <button onClick={getRandomRecipe} className="btn-generator" type="button" aria-label="Botão para gerar uma nova comida" aria-pressed="true">
-      Gerar comida
+      New recipe
     </button>
   );
 }
